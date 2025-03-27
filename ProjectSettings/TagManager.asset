@@ -4,18 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Interactable
-  - Weapon
-  - bullet
-  - Fire
-  - Ground
-  - Mola
-  - windArea
-  - Navalha
-  - Needle
-  - Obstacle
-  - lava
-  - EndGoal
+  - AI
   layers:
   - Default
   - TransparentFX
@@ -25,25 +14,25 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessingVolumes
+  - EnvironmentRough
+  - EnvironmentDetail
+  - MovingPlatforms
+  - DynamicProps
+  - CharacterControllers
+  - CharacterFirstPerson
+  - CharacterExternal
+  - CharacterPhysics
+  - CharacterRagdoll
+  - CharacterNonColliding
+  - WieldablesFirstPerson
+  - WieldablesExternal
+  - TriggerZones
+  - InteractiveObjects
+  - Doors
+  - SmallDynamicObjects
+  - Effects
+  - AiVisibility
   - 
   - 
   - 
