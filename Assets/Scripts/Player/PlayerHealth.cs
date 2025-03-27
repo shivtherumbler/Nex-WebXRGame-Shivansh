@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using WebXR;
+using UnityEngine.InputSystem;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,7 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject gameOverScreen; // Assign in Unity
     public TextMeshProUGUI gameOverText; // Assign in Unity
-    public WebXRController controller; // Assign Right Controller in Unity
+
+    public InputActionProperty restartButton; // Assign A button in Unity
 
     void Start()
     {
@@ -63,27 +64,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.CompareTag("bullet"))
         {
-            TakeDamage(1);
+            TakeDamage(2);
         }
         else if (other.CompareTag("EndGoal"))
         {
             GameOver(true); // Player wins
-        }
-
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (isGameOver) return; // Ignore collisions if the game is over
-
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            TakeDamage(1);
-        }
-        else if (collision.gameObject.CompareTag("lava"))
-        {
-            currentHealth = 0;
-            GameOver(false); // Player loses
         }
     }
 
@@ -109,7 +94,7 @@ public class PlayerHealth : MonoBehaviour
         health.text = currentHealth.ToString();
         kills.text = totalkills.ToString();
 
-        if (isGameOver && (Input.GetKeyDown(KeyCode.A) || controller.GetButtonDown(WebXRController.ButtonTypes.ButtonA)))
+        if (isGameOver && restartButton.action.WasPressedThisFrame())
         {
             RestartGame();
         }

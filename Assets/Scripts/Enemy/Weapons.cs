@@ -12,7 +12,8 @@ public class Weapons : MonoBehaviour
     public AudioSource shootsound;
     public AudioClip clip;
 
-    private void Start()
+
+    private void OnEnable()
     {
         CanFire = true;
         // You can start the shooting automatically or trigger it with a condition
@@ -45,22 +46,6 @@ public class Weapons : MonoBehaviour
     // Fire the bullet and create the muzzle flash
     IEnumerator Fire()
     {
-        // Check if muzzlespawn, Bullet, and muzzleflash are not null
-        if (muzzlespawn == null)
-        {
-            Debug.LogError("Muzzlespawn is not assigned!");
-            yield break;
-        }
-        if (Bullet == null)
-        {
-            Debug.LogError("Bullet prefab is not assigned!");
-            yield break;
-        }
-        if (muzzleflash == null)
-        {
-            Debug.LogError("Muzzleflash prefab is not assigned!");
-            yield break;
-        }
 
         // Instantiate the bullet
         GameObject newBullet = Instantiate(Bullet, muzzlespawn.position, muzzlespawn.rotation);

@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - AI
+  - Navalha
+  - Ground
+  - bullet
+  - Fire
+  - Mola
+  - windArea
+  - lava
+  - Obstacle
+  - EndGoal
+  - Interactable
   layers:
   - Default
   - TransparentFX
