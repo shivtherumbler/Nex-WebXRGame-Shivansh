@@ -15,6 +15,7 @@ TagManager:
   - Obstacle
   - EndGoal
   - Interactable
+  - UIButton
   layers:
   - Default
   - TransparentFX
