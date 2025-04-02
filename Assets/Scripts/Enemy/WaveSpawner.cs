@@ -50,7 +50,7 @@ public class WaveSpawner : MonoBehaviour
             }
         }
         waveNo.text = (currentWaveNumber+1).ToString();
-        healthleft.text = (player.currentHealth + "%");
+        healthleft.text = (player.currentHealth + "%").ToString();
         enemyKilled.text = player.totalkills.ToString();
     }
 

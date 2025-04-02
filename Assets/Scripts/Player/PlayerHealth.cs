@@ -84,8 +84,9 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            gameOverText.text = "YOU LOSE!";
-            Debug.Log("YOU LOSE! Press A to Restart.");
+            //gameOverText.text = "YOU LOSE!";
+            //Debug.Log("YOU LOSE! Press A to Restart.");
+            SceneTransitionManager.singleton.GoToSceneAsync(2);
         }
     }
 

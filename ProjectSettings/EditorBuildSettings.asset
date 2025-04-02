@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FacilityGame.unity
     guid: e856f915998e0a346b3ac2d1f67ff5dc
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c7512b156763e5a4f85da02c7549e80d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fe1948d5db318d448ae94f13c6139a67, type: 2}
     WebXR.Settings: {fileID: 11400000, guid: 1d702cc85b5b663478be9523f038e5fc, type: 2}
